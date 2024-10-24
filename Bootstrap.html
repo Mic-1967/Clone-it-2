@@ -6,15 +6,59 @@
     <title>Hover Effects</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
     <style>
+        /* Apply the imported font to the h1 element */
+        h1 {
+            font-family: 'Roboto', sans-serif; /* Change this to your desired font */
+        }
+
         .hover-effect {
             width: 200px;
             height: 200px;
             background-color: lightblue;
             transition: transform 0.3s, background-color 0.3s;
+            border-radius: 50%; /* Makes the image round */
         }            
+
         .hover-effect:hover {
-            transform: scale(1.2) 
+            transform: scale(1.2);
+            background-color: lightcoral; /* Optional: Change background color on hover */
+        }
+
+        h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif; /* Different font for other headings */
+            transition: background-color 0.3s; /* Smooth transition for h2, h3, and h4 hover */
+        }
+
+        h1:hover {
+            background-color: lightgreen; /* Color for h1 on hover */
+        }
+
+        h2:hover {
+            background-color: lightblue; /* Color for h2 on hover */
+        }
+
+        h3:hover {
+            background-color: lightpink; /* Color for h3 on hover */
+        }
+
+        h4:hover {
+            background-color: lightyellow; /* Color for h4 on hover */
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        h1, h2, h3, h4 {
+            margin-top: 20px;
+            padding: 5px; /* Adds padding for better visibility */
+        }
+    </style>
 </head> 
 
 <body class="bg-light">
@@ -44,27 +88,38 @@
         </h4>
 
         <!-- Button to change background color -->
-        <button class="btn btn-info mt-2" onclick="changeBackgroundColor()">Change Background Color</button>
+        <button class="btn btn-info mt-2" id="change-bg-btn">Change Background Color</button>
 
         <!-- Button to trigger the alert -->
         <button class="btn btn-primary mt-2" onclick="showAlert()">Click Me</button>
     </div>
 
-    <!-- Script to change the background color -->
     <script>
+        // Variable to track the background color state
+        let isViolet = false; // Initially, the background color is not violet
+
+        // Function to toggle the background color
         function changeBackgroundColor() {
-            document.body.style.backgroundColor = "violet"; // Change to violet
+            if (isViolet) {
+                document.body.style.backgroundColor = ""; // Reset to original color
+            } else {
+                document.body.style.backgroundColor = "violet"; // Change to violet
+            }
+            isViolet = !isViolet; // Toggle the state
         }
 
+        // Attach event listener to the button
+        document.getElementById("change-bg-btn").addEventListener("click", changeBackgroundColor);
+
+        // Function to show an alert
         function showAlert() {
             alert("Hello! Welcome to my site!");
         }
     </script>
 
-    <!-- Bootstrap JS and dependencies -->
+    <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
- 
