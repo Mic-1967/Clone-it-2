@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Effects</title>
+  <style>
+    .hover-effect {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      transition: transform 0.3s, background-color 0.3s;
+    }            
+    .hover-effect:hover {
+    
+     transform: scale(1.2) rotate(180deg);
+     background-color: lightcoral;
+    }
+  </style>
+</head> 
+
+<body> 
+<h1 style="color:aqua">Michael Williams</h1>
+
+<img class="hover-effect"
+ src="https://res.cloudinary.com/dks39fimy/image/upload/v1663026321/picture_of_me_m9jwxo.jpg"
+ alt="Picture of Michael Williams">
+
+<h2>
+  My Experience with Web Design and Development has been a 
+  learning and rewarding process in the knowledge and understanding 
+  of getting the overall fundamentals and steps it takes to being 
+  successful in this field of study.
+</h2>
+
+<h3>
+  What I hope to gain from this course is learning a new skill set that 
+  I can use that will benefitme as I continue to pursue my degree.
+</h3>
+
+<h4>
+  What I would like to do with my new web design knowledge in the future 
+    is to be able to create a website that I could be proud to show all the 
+    skills that I have learned while doing my craft. </p>
+</h4>
+
+ <!-- Button to change background color -->
+ <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+ <!-- Button to trigger the alert -->
+ <button onclick="showAlert()">Click Me</button>
+
+ <!-- Script to change the background color -->
+ <script>
+   function changeBackgroundColor() {
+     document.body.style.backgroundColor = "violet"; // Change to violet
+   }
+
+   function showAlert() {
+     alert("Hello! Welcome to my site I");
+   }
+ </script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</body>
+</html> 
+
+ 
